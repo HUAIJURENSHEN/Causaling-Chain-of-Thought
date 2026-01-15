@@ -1,0 +1,50 @@
+========================================
+SC-CoT & ToT Prompt Templates (Consolidated)
+========================================
+
+----------------------------------------
+A) SC-CoT (Self-Consistency) Templates
+----------------------------------------
+
+[Task]
+Write your own step-by-step reasoning to solve the problem.
+
+[Math Problem]
+{problem}
+
+[Provided reasoning path]
+{steps}
+
+[Instructions]
+- If the provided reasoning path is correct, you may reuse it.
+- If the provided reasoning path is wrong, ignore it and produce a correct reasoning path.
+- Keep steps concise and sequential.
+- Return the final answer at the end in the format: \boxed{<index>}.
+
+[Output Format]
+Reasoning:
+<your step-by-step reasoning>
+
+Final:
+\boxed{<index>}
+
+
+# SC-CoT (Vanilla; No Provided Path)
+# Placeholder: {problem}
+[Task]
+Solve the problem step by step. First write a concise reasoning path, then give the final answer.
+
+[Math Problem]
+{problem}
+
+[Instructions]
+- Think step by step and keep each step short.
+- If you consider multiple options, branch them briefly and prune quickly.
+- Return the final answer at the end in the format: \boxed{<index>}.
+
+[Output Format]
+Reasoning:
+<your step-by-step reasoning>
+
+Final:
+\boxed{<index>}

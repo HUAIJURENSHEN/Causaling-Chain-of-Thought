@@ -1,0 +1,9 @@
+The following is a math problem:
+
+[Math Problem]
+
+{problem}
+
+Your task is to think this [Math Problem] and directly answer the solution.
+
+Please put your final answer(only answer) (i.e., the index) in \boxed{{}}.

@@ -1,0 +1,48 @@
+# ToT uses a small controller that alternates between:
+# (1) Expansion → (2) Value (scoring) → repeat until stop → (3) Finalize.
+
+# (1) Expansion Prompt — propose B next steps
+# Placeholders: {problem}, {partial_path}, {branching_factor}
+[Problem]
+{problem}
+
+[Current partial path]
+{partial_path}
+
+[Task]
+Propose up to {branching_factor} next steps that progress toward the solution.
+Each step must be a single concise statement.
+
+[Output]
+Return ONLY a JSON list of strings, e.g.:
+["next step 1", "next step 2", "next step 3"]
+
+
+# (2) Value Prompt — score a partial path
+# Placeholders: {problem}, {partial_path}
+[Problem]
+{problem}
+
+[Partial path]
+{partial_path}
+
+[Task]
+Judge how promising this partial path is for reaching a correct final answer.
+Score from 0 to 100 and indicate whether the path is complete.
+
+[Output]
+Return ONLY JSON:
+{"value": <integer 0-100>, "should_stop": <true|false>}
+
+
+# (3) Finalize Prompt — produce the final answer from the best path
+# Placeholders: {problem}, {best_path}
+[Problem]
+{problem}
+
+[Selected full path]
+{best_path}
+
+[Task]
+Compute the final answer strictly following the selected path.
+Output the result as: \boxed{<index>}

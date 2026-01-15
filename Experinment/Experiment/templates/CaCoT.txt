@@ -1,0 +1,13 @@
+The following is a math problem and reasoning path:
+
+[Math Problem]
+
+{problem}
+
+[reasoning path]
+
+{steps}
+
+Your task is to answer the questions step by step according to the [reasoning path] I gave you. If the [reasoning path] I gave you is correct, please answer the correct answer; Conversely, if the [reasoning path] I give you is wrong, please ignore the wrong [reasoning path] and answer me the correct process and answer according to the correct solution.
+
+Please put your final answer (i.e., the index) in \boxed{{}}.
